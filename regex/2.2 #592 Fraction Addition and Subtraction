@@ -1,0 +1,45 @@
+# Complejidad espacial: O(n²)
+# Complejidad temporal: O(n)
+# Justificación:ya que search esta adentro del while y cada una de ellas tiene complejidad O(n)
+
+class Solution:
+    import re
+    def fractionAddition(self, expression: str) -> str:
+        num_total = 0
+        den_total = 1
+        
+        posicion= 0
+        
+        
+        while posicion < len(expression):
+
+            cadenarest = expression[posicion:]
+            
+
+            match = re.search(r'([+-]?\d+)/(\d+)', cadenarest)
+            
+
+            if not match:
+                break
+
+            num_actual = int(match.group(1))
+            den_actual = int(match.group(2))
+
+            num_total = (num_total * den_actual) + (num_actual * den_total)
+            den_total = den_total * den_actual
+ 
+            posicion += match.end()
+            
+ 
+        a, b = abs(num_total), den_total
+        while b:
+            a, b = b, a % b
+        mcd = a
+        
+        num_total //= mcd
+        den_total //= mcd
+        
+        if num_total == 0:
+            den_total = 1
+            
+        return f"{num_total}/{den_total}"
