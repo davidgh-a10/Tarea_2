@@ -1,6 +1,6 @@
 # Complejidad temporal: O(n)
 # Complejidad espacial: O(n)
-# Justificación: se recorre la lista nums una sola vez(solo es un for)
+# Justificación: se recorre la lista nums una sola vez (solo es un for)en el peor caso
 # solo se va guardando cada indice de cada elemento recorrido
 class Solution:
 

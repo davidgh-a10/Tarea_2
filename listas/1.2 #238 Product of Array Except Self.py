@@ -1,3 +1,7 @@
+# Complejidad temporal: O(n)
+# Complejidad espacial: O(n)
+# Justificación: se recorre la lista nums dos veces siempre, entonces la complejidad es lineal
+# Se guarda una lista de tamaño 2(len(num)) por lo cual es lineal
 class Solution:
     def productExceptSelf(self, nums: list[int]) -> list[int]:
         
