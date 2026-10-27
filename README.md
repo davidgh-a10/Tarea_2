@@ -1,2 +1,8 @@
-# Tarea_2
-tarea_2 Manejo de Datos
+
+Los Epsilons
+
+Arévalo Esquivel Luis Daniel
+
+Gonzalez Hidalgo David Angel
+
+Reyes Miranda Diego Zaid
